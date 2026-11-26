@@ -552,6 +552,10 @@ function dayData(i){
   // Sex
   o[4]=w===14?{rest:"Sem pernas nem corrida, para o teste de sábado. Se quiseres, 10–15 min de mobilidade.",note:"Sexta nunca tem corrida."}:{str:STR("C","Pernas e core (45–55 min)"),note:"Sexta é só musculação: sem corrida."};
   if(w!==14&&(w>=7))o[4].str.txt.push("Amanhã é dia de corrida de qualidade ou fácil: se as pernas estiverem pesadas, faz menos 1 série em cada exercício.");
+  if(w===1){var mv=o[3].run;mv.txt=mv.txt.slice(0,1);
+    o[3]={str:o[3].str,note:"A corrida de quinta passou para sexta."};
+    o[3].str.txt.push("Hoje só a musculação de ombros e antebraço.");
+    o[4]={run:mv,note:"Corrida de quinta passada para sexta, só esta semana. Sem musculação de pernas."}}
   // Sáb
   var sr=satRun(w);
   o[5]=sr?{run:sr,prev:w===14?null:"A"}:{rest:"Dia livre. A corrida de sábado entra na semana 7. Se quiseres, faz o Bloco de prevenção A.",prev:"A",opt:true};
