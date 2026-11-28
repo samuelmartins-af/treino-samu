@@ -555,11 +555,11 @@ function dayData(i){
   if(w===1){var mv=o[3].run;mv.txt=mv.txt.slice(0,1);
     o[3]={str:o[3].str,note:"A corrida de quinta passou para sexta."};
     o[3].str.txt.push("Hoje só a musculação de ombros e antebraço.");
-    o[4]={run:mv,note:"Corrida de quinta passada para sexta, só esta semana. Sem musculação de pernas."}}
+    o[4]={rest:"Dia livre: sem corrida e sem pernas esta semana. A corrida passou para sábado.",note:"Sexta nunca tem corrida: a corrida passou para sábado."}}
   // Sáb
   var sr=satRun(w);
   o[5]=sr?{run:sr,prev:w===14?null:"A"}:{rest:"Dia livre. A corrida de sábado entra na semana 7. Se quiseres, faz o Bloco de prevenção A.",prev:"A",opt:true};
-  if(w===1){var cs=STR("B","Costas e bíceps (50–60 min)");cs.txt.push("Recuperação da musculação de terça. Treino de costas hoje e longa fácil amanhã: se as costas estiverem pesadas, reduz 1 série.");o[5]={str:cs,prev:"A",note:"Dia que repõe a musculação de terça."}}
+  if(w===1){var cs=STR("B","Costas e bíceps (50–60 min)");cs.txt.push("Recuperação da musculação de terça. Treino de costas hoje e longa fácil amanhã: se as costas estiverem pesadas, reduz 1 série.");cs.txt.push("Faz a corrida primeiro e a musculação a seguir (ou à noite, com algumas horas de intervalo).");mv.txt.push("Sábado antes da longa de domingo: mantém mesmo fácil.");o[5]={run:mv,str:cs,prev:"A",note:"Corrida de quinta passada para sábado, só esta semana. Também repõe a musculação de terça."}}
   // Dom
   var ur=sunRun(w);
   o[6]=ur?{run:ur,prev:"B"}:{rest:"Descanso, para o teste de sábado. Segunda-feira, 1 de março, é a meta: vê como te sentes e como correu o teste.",prev:"B",opt:true};
